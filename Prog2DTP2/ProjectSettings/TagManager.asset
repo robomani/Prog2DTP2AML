@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Wall
+  - Destructible
+  - Trap
+  - Player
+  - Enemy
+  - Floor
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Destructible
+    uniqueID: 1552676043
+    locked: 0
+  - name: Floors
+    uniqueID: 3934675529
+    locked: 0
+  - name: Walls
+    uniqueID: 2134960635
+    locked: 0
+  - name: Traps
+    uniqueID: 812201557
+    locked: 0
+  - name: Bomb
+    uniqueID: 1596869891
+    locked: 0
+  - name: PowerUp
+    uniqueID: 1043525393
+    locked: 0
+  - name: Monsters
+    uniqueID: 1956780129
+    locked: 0
+  - name: Players
+    uniqueID: 3280463649
+    locked: 0
+  - name: UI
+    uniqueID: 588690495
+    locked: 0
