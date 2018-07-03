@@ -41,7 +41,6 @@ public class LevelData : ScriptableObject
 
     public void BackUp()
     {
-        Debug.Log("StartBackUp");
         for (int i = 0; i < m_Tiles.Length; i++)
         {
             m_Tiles[i].BackUp();
@@ -53,7 +52,7 @@ public class LevelData : ScriptableObject
 public class TileColumn
 {
     [SerializeField] private ETileType[] m_Tiles;
-    private ETileType[] m_BackUp;
+    [SerializeField] private ETileType[] m_BackUp;
 
     public TileColumn(int aLength)
     {

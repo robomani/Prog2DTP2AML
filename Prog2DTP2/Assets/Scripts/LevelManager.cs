@@ -27,7 +27,7 @@ public class LevelManager : MonoBehaviour
             m_Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        m_LoadingScreen.SetActive(false);
+        //m_LoadingScreen.SetActive(false);
     }
 
     private void StartLoading()
@@ -49,6 +49,6 @@ public class LevelManager : MonoBehaviour
         //StartCoroutine qui attend 3 secondes et m_IsLoadingDone == True
         //Action/Event that trigger automaticlly the given function
         //we add the function to the action/event list
-        SceneManager.sceneLoaded += OnLoadingDone;
+        //SceneManager.sceneLoaded += OnLoadingDone;
     }
 }

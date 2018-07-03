@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prog2DTP2", "Prog2DTP2.csproj", "{429423D6-0F08-D25C-BF23-547C0E4B58B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prog2DTP2.Editor", "Prog2DTP2.Editor.csproj", "{41A2DDB6-E28B-02B7-0DAE-A971AD272DD8}"
