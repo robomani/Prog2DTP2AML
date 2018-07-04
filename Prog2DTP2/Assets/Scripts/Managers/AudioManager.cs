@@ -108,7 +108,7 @@ public class AudioManager : DontDestroyOnLoad
         if (m_Menu)
         {
             m_MenuSong++;
-            if (m_MenuSong > m_MenuMusicList.Length)
+            if (m_MenuSong >= m_MenuMusicList.Length)
             {
                 m_MenuSong = 0;
             }
@@ -117,7 +117,7 @@ public class AudioManager : DontDestroyOnLoad
         else
         {
             m_GameSong++;
-            if (m_GameSong > m_GameMusicList.Length)
+            if (m_GameSong >= m_GameMusicList.Length)
             {
                 m_GameSong = 0;
             }

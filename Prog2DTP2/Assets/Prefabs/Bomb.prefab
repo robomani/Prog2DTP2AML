@@ -137,12 +137,15 @@ MonoBehaviour:
   m_FuseSound: {fileID: 8300000, guid: ce6e59a4491d0ce48a9b303be10c493f, type: 3}
   m_BoomSound: {fileID: 8300000, guid: 3b976a62a5f29d84ab98ef08dccb49e9, type: 3}
   m_AudioSource: {fileID: 82890523710804264}
+  m_EnemyPrefab: {fileID: 114502330141608422, guid: 1d8f984a34ea02b4bae9b0627f3ca1eb,
+    type: 2}
   m_FuseTime: 1.5
   m_DeleteTime: 2.5
   m_PosX: 0
   m_PosY: 0
   m_Range: 0
   m_Flame: {fileID: 1537077065037236, guid: b0e6f2f7f843f1248a913f7ff1a3c8c5, type: 2}
+  m_Camera: {fileID: 0}
 --- !u!212 &212744895276021568
 SpriteRenderer:
   m_ObjectHideFlags: 1

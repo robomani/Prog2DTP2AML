@@ -6,6 +6,15 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public GameObject m_LoadingScreen;
+    public bool m_Win = false;
+    public bool m_Pause = false;
+    public int m_NbrEnemy = 0;
+
+    public PlayerMovement m_Player;
+
+    public List<Vector2> m_Flames;
+    public List<EnemyMovement> m_Enemy;
+
     private static LevelManager m_Instance;
     public static LevelManager Instance
     {
@@ -17,13 +26,11 @@ public class LevelManager : MonoBehaviour
         //Destroy the object if it is not the first
         if (m_Instance != null)
         {
-            Debug.Log("Already exist kill self");
             Destroy(gameObject);
         }
         //else assign the first instance to show that the singleton exist and let it be called
         else
         {
-            Debug.Log("First one king of the hill");
             m_Instance = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -45,6 +52,8 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeLevel(string i_Scene)
     {
+        m_Flames.Clear();
+        m_Enemy.Clear();
         SceneManager.LoadScene(i_Scene);
         //StartCoroutine qui attend 3 secondes et m_IsLoadingDone == True
         //Action/Event that trigger automaticlly the given function

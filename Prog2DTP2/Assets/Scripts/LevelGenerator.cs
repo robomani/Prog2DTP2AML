@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -18,12 +19,20 @@ public class LevelGenerator : MonoBehaviour
     public GameObject[] m_DestructibleWallPrefabList;
     public GameObject[] m_TrapPrefabList;
 
+    public GameObject[] m_TokenList;
+
     public Transform m_TileContainer;
 
     public LevelData m_LevelData;
 
     public PlayerMovement m_PlayerPrefab;
-        
+    public EnemyMovement m_EnemyPrefab;
+
+
+
+    public TextMeshPro m_LifeText;
+    public TextMeshPro m_RangeText;
+
     private void Awake()
     {
         m_Instance = this;
@@ -41,6 +50,9 @@ public class LevelGenerator : MonoBehaviour
         Vector2 spawnPos = initialPos + offset;
         PlayerMovement player = Instantiate(m_PlayerPrefab, spawnPos, Quaternion.identity);
         player.Setup(1, 1);
+        player.m_LifeText = m_LifeText;
+        player.m_RangeText = m_RangeText;
+
 
         for (int i = 0; i < m_LevelData.GetWidth(); ++i)
         {
@@ -50,6 +62,27 @@ public class LevelGenerator : MonoBehaviour
                 spawnPos = initialPos + offset;
 
                 CreateTile(m_LevelData.Tiles[i][j], spawnPos);
+
+                if (m_LevelData.Tiles[i][j] == ETileType.Trap)
+                {
+                    EnemyMovement ennemy = Instantiate(m_EnemyPrefab, spawnPos, Quaternion.identity);
+                    ennemy.Setup(j, i);
+
+                    if (LevelManager.Instance != null)
+                    {
+                        LevelManager.Instance.m_Enemy.Add(ennemy);
+                    }
+                    
+                }
+                else if(m_LevelData.Tiles[i][j] == ETileType.Floor)
+                {
+                    int rand = (int)Random.Range(0,3);
+                    if(rand == 0)
+                    {
+                       Instantiate(m_TokenList[(int)Random.Range(0, m_TokenList.Length)], spawnPos, Quaternion.identity);
+                    }
+                    
+                }
             }
         }
     }

@@ -29,7 +29,7 @@ public class LevelDataEditor : Editor
         m_WallTexture = (Texture)EditorGUIUtility.Load("Bricks.jpg");
         m_FloorTexture = (Texture)EditorGUIUtility.Load("Floor.jpg");
         m_DestructibleWall = (Texture)EditorGUIUtility.Load("DestructibleWall.png");
-
+        m_Trap = (Texture)EditorGUIUtility.Load("Trap.png");
 
         InitSize();
     }
